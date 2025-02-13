@@ -31,8 +31,9 @@ body,
 }
 
 #body {
-  height: 100vh; /* 윈도우 높이를 기준으로 하는 단위 */
-  width: 1024px;
+  min-height: 100vh; /* 윈도우 높이를 기준으로 하는 단위 */
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto; /* 부모를 기준으로 center가 된다 */
   padding: 24px;
 }
@@ -40,4 +41,20 @@ body,
 #footer {
   height: 200px;
   background-color: rgb(230, 230, 230);
+}
+
+/* 반응형 웹  (모바일) */
+@media screen and (max-width: 400px) {
+  .product-card {
+    width: 160px !important;
+  }
+  #haeder {
+    padding: 0 8px;
+  }
+  #body {
+    padding: 0 8px;
+  }
+  .ant-carousel {
+    margin: 0 -8px;
+  }
 }
